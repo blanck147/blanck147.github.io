@@ -4,39 +4,29 @@
   
     
     <entry>
-      <title>Electron 的中文教程就是这样子的了哈哈哈哈哈哈</title>
-      <link href="/2019/03/31/%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B/"/>
-      <url>/2019/03/31/%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B/</url>
+      <title>Electron系列第一课</title>
+      <link href="/2019/03/31/Electron%E7%B3%BB%E5%88%97%E7%AC%AC%E4%B8%80%E8%AF%BE/"/>
+      <url>/2019/03/31/Electron%E7%B3%BB%E5%88%97%E7%AC%AC%E4%B8%80%E8%AF%BE/</url>
       
-        <content type="html"><![CDATA[<p><img src="http://img.blanck147.top/blog/20190331/hjV8Ruw68vkt.jpg?imageslim" alt="mark"><br><img src="http://img.blanck147.top/blog/20190331/qvzJ0rMTpJtD.jpg?imageslim" alt="mark"></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>3123</title>
-      <link href="/2019/03/31/1/"/>
-      <url>/2019/03/31/1/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="Electron-介绍"><a href="#Electron-介绍" class="headerlink" title="Electron 介绍"></a>Electron 介绍</h1><p><a href="https://electronjs.org/" target="_blank" rel="noopener">Electron</a>是一种<strong>跨平台的桌面应用</strong>的解决方案，使用 JavaScript, HTML 和 CSS 构建跨平台的桌面应用。这就意味着你可以利用现有很多前段UI库做出很酷炫的应用。比如：</p><ol><li><a href="https://www.highcharts.com.cn/demo/highcharts" target="_blank" rel="noopener">Highcharts</a>(图表库)<br><img src="http://img.blanck147.top/blog/20190331/dxN8hFLYGLKG.png?imageslim" alt="Highcharts官方界面图"></li><li><a href="https://www.echartsjs.com/examples/#chart-type-map" target="_blank" rel="noopener">echartsjs</a>（也是一个图表库）<br><img src="http://img.blanck147.top/blog/20190331/4KK4SD5CI555.png?imageslim" alt="echartsjs官方界面图"><br>可以来看看用 Electron制作的软件：<br><img src="http://img.blanck147.top/blog/20190331/YE0fJ8cXM5J3.png?imageslim" alt="mark"><blockquote><p>可以这么说 <strong>Electron</strong> 的技术已经相当成熟了，可以干很多事情了。</p></blockquote></li></ol><p><strong>其他的我就不多说了，因为最初学习Electron是因为要做一个数据展示界面，自己也不是专业的程序员。这个文章也是自己学习的一个记录，如果有不对的地方还希望各位和我多多交流，互相学习，一起进步。这个课程很大程度上是借鉴了李宁老师的<a href="https://edu.csdn.net/combo/detail/1057" target="_blank" rel="noopener">课程</a>，更多的是一个记录，方便日后学习，也做一个抛砖引玉。</strong></p><h2 id="一、课前的准备"><a href="#一、课前的准备" class="headerlink" title="一、课前的准备"></a>一、课前的准备</h2><ol><li>你先要准备安装好<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a></li><li>同时在笔记本上面安装好<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a></li><li>安装好 <a href="https://electronjs.org/" target="_blank" rel="noopener">electron</a></li></ol><h5 id="在这里需要讲一下怎么-安装electron"><a href="#在这里需要讲一下怎么-安装electron" class="headerlink" title="在这里需要讲一下怎么 安装electron"></a>在这里需要讲一下怎么 安装electron</h5><blockquote><ul><li>整确保你已经安装了 node.js</li><li>在 <strong>cmd</strong> 中执行 <code>npm install electron -g</code>(在这里执行的是全局安装)</li><li>在 <strong>cmd</strong> 中执行<code>electron</code> ，如果你看到了以下这个界面，就说明你已经成功了</li></ul></blockquote><p><img src="http://img.blanck147.top/blog/20190331/Jz2Um5GyOUQv.png?imageslim" alt="安装成功显示界面"></p><h2 id="二、至少需要三个文件"><a href="#二、至少需要三个文件" class="headerlink" title="二、至少需要三个文件"></a>二、至少需要三个文件</h2><ol><li>package.json: 用于配置Electron 工程的</li></ol><blockquote><p>下面的 <code>&quot;main&quot;:&quot;index.js&quot;</code> 是必要的，是整个程序的入口</p><pre><code class="json">{  &quot;name&quot;: &quot;first&quot;,   &quot;version&quot;: &quot;1.0.0&quot;,  &quot;main&quot;: &quot;index.js&quot;}</code></pre></blockquote><ol start="3"><li>index.js: 主程序桌面应用程序入口点</li></ol><pre><code class="javascript">const {app,BrowserWindow} = require(&#39;electron&#39;); // 在electron 中有 app 这个对象 和BrowserWindow 这个类function createWindow(){    win = new BrowserWindow({width:800,height:600}); //在这里是创建一个BrowserWindow的实例，就是一个窗口，设定大小  win.loadFile(&#39;index.html&#39;); //加载了主窗口UI的页面文件}app.on(&#39;ready&#39;,createWindow); //app对象下面监听 &#39;ready&#39; 这个时间，只有当app准备好了才会启动窗口</code></pre><ol start="5"><li>==index.html==：主窗口UI的页面文件<pre><code class="html">&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;&lt;title&gt;Hello World&lt;/title&gt;&lt;/head&gt;&lt;body&gt;这是第一个electron 应用&lt;/body&gt;&lt;/html&gt;</code></pre></li></ol><h3 id="文件的目录结构如下"><a href="#文件的目录结构如下" class="headerlink" title="文件的目录结构如下"></a>文件的目录结构如下</h3><p><img src="http://img.blanck147.top/blog/20190331/no61YTxqXhHc.png?imageslim" alt="第一个目录显示文件"></p><p>现在本级的目录下面打开 <strong>cmd</strong> 输入<code>electron .</code> ，就可以看到如下界面了：<br><img src="http://img.blanck147.top/blog/20190331/JcpRdpp1fEGI.png?imageslim" alt="成功界面"></p><blockquote><p>好了，第一个教程就到了这里了，加油。</p></blockquote>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>123</title>
-      <link href="/2019/03/31/123/"/>
-      <url>/2019/03/31/123/</url>
-      
-        <content type="html"><![CDATA[]]></content>
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Electron </category>
+          
+      </categories>
       
       
+        <tags>
+            
+            <tag> Electron </tag>
+            
+            <tag> 跨平台桌面软件 </tag>
+            
+        </tags>
       
     </entry>
     
